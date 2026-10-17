@@ -1,0 +1,39 @@
+DOCUMENTACIÓN DE ENDPOINTS - API REST AUTHENTICATION
+Aprendiz: Kevin Andres Hernandez Sanabria
+Programa: ADSO - SENA
+Evidencia: GA7-220501096-AA5-EV02
+
+Servidor Base: http://localhost:3000
+
+1. Registro de Usuario:
+   - URL: http://localhost:3000/api/auth/register
+   - Método HTTP: POST
+   - Headers: Content-Type: application/json
+   - Body (JSON):
+     {
+       "nombre": "Kevin Hernandez",
+       "email": "keviin09andres@gmail.com",
+       "password": "123"
+     }
+   - Respuesta Exitosa (201 Created):
+     {
+       "mensaje": "Usuario registrado exitosamente"
+     }
+
+2. Inicio de Sesión (Login):
+   - URL: http://localhost:3000/api/auth/login
+   - Método HTTP: POST
+   - Headers: Content-Type: application/json
+   - Body (JSON):
+     {
+       "email": "keviin09andres@gmail.com",
+       "password": "123"
+     }
+   - Respuesta Exitosa (200 OK):
+     {
+       "mensaje": "Autenticación satisfactoria"
+     }
+   - Respuesta Error (401 Unauthorized):
+     {
+       "mensaje": "Credenciales incorrectas"
+     }
